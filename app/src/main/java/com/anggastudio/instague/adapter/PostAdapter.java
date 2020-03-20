@@ -1,5 +1,6 @@
 package com.anggastudio.instague.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.anggastudio.instague.R;
 import com.anggastudio.instague.data.model.Post;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -32,11 +35,18 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Holder> {
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
+        Context context = holder.itemView.getContext();
         Post post = posts.get(position);
         holder.tvUsername.setText(post.getUsername());
         String captionDisplay = getCaptionDisplay(post);
         holder.tvCaption.setText(HtmlCompat.fromHtml(captionDisplay, HtmlCompat.FROM_HTML_MODE_COMPACT));
-
+        Glide.with(context)
+                .load(post.getAvatarPath())
+                .apply(RequestOptions.circleCropTransform())
+                .into(holder.ivAvatar);
+        Glide.with(context)
+                .load(post.getImagePath())
+                .into(holder.ivPostImage);
     }
 
     private String getCaptionDisplay(Post post) {

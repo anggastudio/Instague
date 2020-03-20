@@ -23,6 +23,8 @@ public class HomeViewModel extends ViewModel {
         post.setImagePath("https://anggastudio.dev/assets/img/anggapratama.jpg");
         post.setCaption("ini postingan pertama gue, udah mah pertama, dummy lagi");
         postList.add(post);
+        postList.add(post);
+        postList.add(post);
         ldPostList.setValue(postList);
         return ldPostList;
     }
