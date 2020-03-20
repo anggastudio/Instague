@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Instague</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_add_post">Add Post</string>
     <string name="title_notifications">Notifications</string>
+    <string name="account">Account</string>
+    <string name="search">Search</string>
 </resources>

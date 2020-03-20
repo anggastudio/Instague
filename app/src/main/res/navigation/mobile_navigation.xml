@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_add_post"
         android:name="com.anggastudio.instague.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_add_post"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
