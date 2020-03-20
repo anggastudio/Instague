@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_add_post"
-        android:name="com.anggastudio.instague.ui.dashboard.DashboardFragment"
+        android:name="com.anggastudio.instague.ui.dashboard.AddPostFragment"
         android:label="@string/title_add_post"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_add_post" />
 
     <fragment
         android:id="@+id/navigation_notifications"
