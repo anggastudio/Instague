@@ -12,6 +12,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.anggastudio.instague.R;
+import com.anggastudio.instague.data.model.Post;
+
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
@@ -38,8 +41,10 @@ public class HomeFragment extends Fragment {
     }
 
     private void observeViewModel() {
-        homeViewModel.getText().observe(getViewLifecycleOwner(), s -> {
+        homeViewModel.getPost().observe(getViewLifecycleOwner(), this::setPostsToView);
+    }
 
-        });
+    private void setPostsToView(List<Post> posts) {
+
     }
 }
