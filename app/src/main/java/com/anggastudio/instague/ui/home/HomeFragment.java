@@ -9,9 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.anggastudio.instague.R;
+import com.anggastudio.instague.adapter.PostAdapter;
 import com.anggastudio.instague.data.model.Post;
 
 import java.util.List;
@@ -45,6 +47,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void setPostsToView(List<Post> posts) {
-
+        rvPostList.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rvPostList.setAdapter(new PostAdapter(posts));
     }
 }
