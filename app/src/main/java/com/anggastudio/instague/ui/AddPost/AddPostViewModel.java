@@ -1,4 +1,4 @@
-package com.anggastudio.instague.ui.dashboard;
+package com.anggastudio.instague.ui.AddPost;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

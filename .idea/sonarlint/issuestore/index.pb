@@ -17,8 +17,6 @@ l
 <app/src/main/java/com/anggastudio/instague/MainActivity.java,9\b\9b18b90f8ce5d9de743531a0123dbf5c7d2336ff
 }
 Mapp/src/main/java/com/anggastudio/instague/ui/dashboard/AddPostViewModel.java,8\c\8c26b957a61735e5d06a5b21bd6fe9ec411efa78
-]
--app/src/main/res/layout/fragment_add_post.xml,1\3\13bd71cc227db30ce5b94e3fe28683fdbd8c0c1a
 R
 "app/src/main/res/values/styles.xml,f\7\f79cc2688e29fcbc286fda14ae07b27c9e83690f
 |
