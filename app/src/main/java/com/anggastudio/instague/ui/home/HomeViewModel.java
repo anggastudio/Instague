@@ -1,21 +1,29 @@
 package com.anggastudio.instague.ui.home;
 
+import android.app.Application;
+
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.anggastudio.instague.data.model.Post;
+import com.anggastudio.instague.data.repository.PostRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeViewModel extends ViewModel {
 
-    public HomeViewModel() {
+    PostRepository postRepository;
+
+    public HomeViewModel(Application application) {
+        postRepository = new PostRepository(application);
     }
 
     public LiveData<List<Post>> getPost() {
-        MutableLiveData<List<Post>> ldPostList = new MutableLiveData<>();
+        return postRepository.getAllPost();
+    }
+
+    private List<Post> getMock() {
         List<Post> postList = new ArrayList<>();
         Post post = new Post();
         post.setUsername("anggastudiocademy");
@@ -25,7 +33,6 @@ public class HomeViewModel extends ViewModel {
         postList.add(post);
         postList.add(post);
         postList.add(post);
-        ldPostList.setValue(postList);
-        return ldPostList;
+        return postList;
     }
 }
