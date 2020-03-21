@@ -27,6 +27,10 @@ public class PostRepository {
         executorService.execute(() -> postDao.insert(post));
     }
 
+    public void insert(List<Post> post) {
+        executorService.execute(() -> postDao.insert(post));
+    }
+
     public void update(Post post) {
         executorService.execute(() -> postDao.update(post));
     }
