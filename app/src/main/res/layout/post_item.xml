@@ -1,46 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:padding="12dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="12dp">
 
-        <androidx.cardview.widget.CardView
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/post_owner_avatar"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            app:cardCornerRadius="4dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/post_owner_avatar"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:src="@mipmap/ic_launcher"/>
-
-        </androidx.cardview.widget.CardView>
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/post_owner_username"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            android:layout_weight="1"
             android:gravity="center_vertical"
-            tools:text="anggastudiocademy"/>
+            tools:text="anggastudiocademy" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/post_settings"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
-            android:src="@drawable/ic_more_vert_black"/>
+            android:src="@drawable/ic_more_vert_black" />
 
     </LinearLayout>
 
@@ -48,14 +41,15 @@
         android:id="@+id/post_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/post_caption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="12sp"
         android:padding="10dp"
-        tools:text="ini caption"/>
+        tools:text="ini caption" />
 
 </LinearLayout>
