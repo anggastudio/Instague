@@ -17,7 +17,7 @@ public class HomeViewModel extends ViewModel {
 
     public HomeViewModel(Application application) {
         postRepository = new PostRepository(application);
-        postRepository.insert(getMockList());
+//        postRepository.insert(getMockList());
     }
 
     public LiveData<List<Post>> getPost() {
