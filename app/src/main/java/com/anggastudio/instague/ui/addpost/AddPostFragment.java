@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.anggastudio.instague.R;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 public class AddPostFragment extends Fragment {
 
@@ -23,6 +26,12 @@ public class AddPostFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        ImageView ivAvatar = view.findViewById(R.id.iv_post_owner_avatar);
+        Glide.with(this)
+                .load("https://anggastudio.dev/assets/img/anggapratama.jpg")
+                .apply(RequestOptions.circleCropTransform())
+                .into(ivAvatar);
     }
 
     @Override
