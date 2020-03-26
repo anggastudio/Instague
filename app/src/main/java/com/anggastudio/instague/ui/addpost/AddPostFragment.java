@@ -1,4 +1,4 @@
-package com.anggastudio.instague.ui.AddPost;
+package com.anggastudio.instague.ui.addpost;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

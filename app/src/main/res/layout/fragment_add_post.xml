@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="60dp"
     android:orientation="vertical"
-    tools:context=".ui.AddPost.AddPostFragment">
+    tools:context=".ui.addpost.AddPostFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
